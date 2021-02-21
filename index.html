@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="src/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="style.css">
-    <title>Responsive Web Site Design</title>
+    <title>RememberThat</title>
     <style>
         @import url(/dist/style.css);
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
@@ -39,6 +39,9 @@ body {
     display: none;
 }
 #navbar-section {
+    position:fixed;
+    top:0;
+    left:0;
     width: 100%;
     height: auto;
     background-color: #fff;
@@ -142,7 +145,7 @@ body {
 #home-section {
     width: 100%;
     height: auto;
-    padding: 0.5rem;
+    padding: 1rem 0.5rem ;
     text-align: center;
 }
 #home-section .container {
@@ -851,6 +854,16 @@ body {
     </section>
     <!--Footer-section Ends Here-->
     <!-- <script src="src/js/bootstrap.bundle.min.js"></script> -->
-    <script src="src/js/script.js"></script>
+    <script>
+        const menuitem = document.querySelector(".menu"),
+    showbtn = document.querySelector(".toggle"),
+    closebtn = document.querySelector(".close");
+showbtn.addEventListener("click", (e) => {
+    e.preventDefault(), menuitem.classList.add("block");
+}),
+    closebtn.addEventListener("click", (e) => {
+        e.preventDefault(), menuitem.classList.remove("block");
+    });
+    </script>
 </body>
 </html>
