@@ -2,112 +2,237 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="src/css/bootstrap.min.css"> -->
-    <link rel="stylesheet" href="style.css">
-    <title>RememberThat</title>
+    <meta name="viewport" 
+
+content="width=device-width, initial-
+
+scale=1.0">
+    <title>Google</title>
+</head>
+<body>
     <style>
-        @import url(/dist/style.css);
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-* {
+        body{
+    font-family: "poppins", sans-serif;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: rgba(20, 19, 19, 0.8627450980392157);
+    line-height: 1;
+    letter-spacing: .7px;
 }
-*,
-ul {
-    margin: 0;
+ul{
+    padding: 0;
+    list-style: none;
 }
-ul {
-    padding-left: 0;
+li{
+    list-style: none;
 }
-a {
-    text-decoration: none;
-    margin: 0;
+.nav{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.nav .navbar{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    align-items: center;
+    justify-content: flex-end;
     padding: 0;
 }
-li {
-    list-style-type: none;
+
+.navbar .nav-item{
+    display: inline-block;
+    padding: .5rem .5rem;
+    margin: 0 .3rem;
 }
-body {
-    font-family: poppins;
-    scroll-behavior: smooth;
-    background-color: #f2f1f1;
-}
-.close-menu,
-.mobile-menu {
-    display: none;
-}
-#navbar-section {
-    position:fixed;
-    top:0;
-    left:0;
+
+.nav-item .nav-link{
+    display: block;
     width: 100%;
     height: auto;
-    background-color: #fff;
-    padding: 0 0.5rem;
+    padding: 0;
+    color: #191919;
+    text-decoration: none;
+    font-size: .8rem;
+}
+svg {
+    width: 17px;
+    height: 17px;  
+  }
+.nav-item .nav-link:hover{
+    text-decoration: underline;
+}
+.nav-link:last-child img{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+}
+.main{
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+    display: block;
+}
+
+.main .row-1{
+    width: 60%;
+    height: auto;
+    margin: 1rem auto;
+    text-align: center;
+}
+.main .row-1 img{
+    width: 30%;
+    height: auto;
+}
+.main .row-2{
+    width: 100%;
+    height: auto;
+}
+.main .row-2 .col-8{
+    width: 80%;
+    height: auto;
+    margin: 1rem auto;
+    text-align: center;
     position: relative;
 }
-#navbar-section .container {
+.input{
     width: 100%;
     height: auto;
-    padding: 0.5rem;
+}
+#search{
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 5.3%;
+    left: 12%;
+    transform: translateY(-5.3%,-12%);
+    fill: #bebebe;
+}
+.main .row-2 .col-8 input[type="search"]{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    padding: .8rem .2rem;
+    border-radius: 100vh;
+    outline: none;
+    border: .5px solid #cacaca;
+    text-align: center;
+}
+#mic{
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 5.3%;
+    right: 12%;
+    transform: translateY(-5.3%,-12%);
+}
+.main .row-2 .col-8 input
+
+[type="search"]:focus{
+    box-shadow: 2px 2px 2px #cacaca;
+    outline: none;
+}
+input[type="search"]::placeholder{
+    font-size: .8rem;
+    text-align: center;
+}
+input[type="search"]:hover{
+    box-shadow: 2px 2px 2px #cacaca;
+}
+.main .row-2 .col-8 .row-3{
+    width: 100%;
+    height: auto;
+}
+.main .row-2 .col-8 .row-3 .link{
+    width: 100%;
+    height: auto;
+    margin: 2rem auto;
     display: flex;
     flex-direction: row;
-    position: relative;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
-#navbar-section .container .logo {
+
+.main .row-2 .col-8 .row-3 .link li{
+    display: inline-block;
+    padding: .5rem 1rem;
+    background-color: #cacaca79;
+    margin: 0 .5rem;
+    border-radius: .4rem;
+    font-weight: 400;
+}
+
+.link li a{
     display: block;
-    width: 28%;
-    height: auto;
-}
-#navbar-section .container .logo h1 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: rgba(0, 0, 0, 0.8627450980392157);
-}
-#navbar-section .container .logo h1 span {
-    color: #547dca;
-}
-#navbar-section .container .menu {
-    width: 70%;
-    height: auto;
-    display: block;
-}
-#navbar-section .container .menu .menu-items {
     width: 100%;
     height: auto;
+    padding: 0;
+    color: #191919;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.link li a:hover{
+    text-decoration: underline;
+}
+.row-3 .lan{
+    width: 100%;
+    display: inline-block;
+}
+.row-3 .lan a{
+    height: auto;
+    padding:0 .2rem;
+    color: #3e60a8;
+    text-decoration: none;
+    font-size: .8rem;
+}
+
+.row-3 li a:hover{
+    text-decoration: underline;
+}
+footer{
+    width: 100%;
+    height: auto;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: .2rem 0;
+    background-color: #f1f1f1;
+}
+footer .col-12-1{
+    width: 90%;
+    height: auto;
+    padding: 0 .5rem;
+    margin: .3rem auto;
+}
+.col-12-1 p{
+    color: #191919;
+    padding: 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+footer .col-12-2{
+    width: 80%;
+    height: auto;
+    margin: .3rem auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-around;
 }
-#navbar-section .container .menu .menu-items .list-one {
-    width: 56%;
+footer .col-12-2 .link-1{
+    width: 60%;
     height: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
 }
-#navbar-section .container .menu .menu-items .list-one .li {
-    display: inline-block;
-    width: auto;
-    height: auto;
-    margin: 0.1rem 0.5rem;
-    text-align: center;
-}
-#navbar-section .container .menu .menu-items .list-one .li a {
-    display: block;
-    font-size: 0.8rem;
-    font-weight: 500;
-    transition: 0.4s ease-in-out;
-}
-#navbar-section .container .menu .menu-items .list-one .li a:hover {
-    font-weight: 600;
-}
-#navbar-section .container .menu .menu-items .list-two {
+footer .col-12-2 .link-2{
     width: 40%;
     height: auto;
     display: flex;
@@ -115,756 +240,224 @@ body {
     align-items: center;
     justify-content: flex-end;
 }
-#navbar-section .container .menu .menu-items .list-two .li {
+footer .col-12-2 ul li{
     display: inline-block;
-    width: auto;
-    height: auto;
-    margin: 0.1rem 0.5rem;
-    text-align: center;
+    padding: .5rem .1rem;
+    margin: 0 .2rem;
+    border-radius: .4rem;
+    font-weight: 400;
 }
-#navbar-section .container .menu .menu-items .list-two .li a {
+
+footer .col-12-2 ul li a{
     display: block;
-    font-size: 0.8rem;
-    font-weight: 500;
-    transition: 0.4s ease-in-out;
-}
-#navbar-section .container .menu .menu-items .list-two .li a:hover {
-    font-weight: 600;
-}
-#navbar-section .container .menu .menu-items .list-two .li:last-child a {
-    color: #547dca;
-    padding: 0.5rem;
-    border: 1px solid #547dca;
-    border-radius: 1.5rem;
-    font-weight: 600;
-}
-#navbar-section .container .menu .menu-items .list-two .li:last-child a:hover {
-    color: #fff;
-    background-color: #547dca;
-}
-#home-section {
     width: 100%;
     height: auto;
-    padding: 1rem 0.5rem ;
-    text-align: center;
-}
-#home-section .container {
-    width: 100%;
-    height: auto;
-    display: block;
-    position: relative;
-}
-#home-section .container .row {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    align-items: center;
-    justify-items: center;
-}
-#home-section .container .row .col-1 {
-    width: 50%;
-    height: auto;
-    display: block;
-    margin-top: 0;
-    position: relative;
-}
-#home-section .container .row .col-1 h4 {
-    font-size: 1.5rem;
-    color: #4e4e4e;
-    margin: 0.5rem;
-}
-#home-section .container .row .col-1 h2 {
-    font-size: 2rem;
-    margin: 0.5rem;
-}
-#home-section .container .row .col-1 .row {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center center;
-}
-#home-section .container .row .col-1 .row .col-btn {
-    width: 50%;
-    height: auto;
-    display: block;
-}
-#home-section .container .row .col-1 .row .col-btn .home-btn {
-    cursor: pointer;
-    outline: none;
-    border: none;
-    font-size: 1.5rem;
-    font-weight: 600;
-    border-radius: 2.5rem;
-    color: #fff;
-    background-color: #547dca;
-    width: auto;
-    height: auto;
-    padding: 0.1rem 0.3rem;
-    transition: 0.3s ease-in-out;
-}
-#home-section .container .row .col-1 .row .col-btn .home-btn:hover {
-    background: #fff;
-    color: #547dca;
-}
-#home-section .container .row .col-1 .row .col-video {
-    width: 50%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-#home-section .container .row .col-1 .row .col-video img {
-    margin: 0.2rem;
-}
-#home-section .container .row .col-2 {
-    width: 50%;
-    height: auto;
-    text-align: center;
-}
-#list-section {
-    width: 100%;
-    height: auto;
-    padding: 0.5rem;
-    background: #000;
-}
-#list-section .container {
-    width: 100%;
-    height: auto;
-    margin: 1rem;
-    padding: 1rem;
-    text-align: left;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-}
-#list-section .container li {
-    margin: 0.5rem 0 0.5rem 0.5rem;
-    position: relative;
-    color: #fff;
-}
-#list-section .container li:before {
-    content: "";
-    left: -2em;
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-image: url(https://www.flaticon.com/svg/vstatic/svg/190/190411.svg?token=exp=1613935549~hmac=e7701b3c23db7092c6388031857b911b);
-    background-size: contain;
-    margin-right: 0.5em;
-}
-#testimony-section {
-    width: 100%;
-    height: auto;
-    padding: 1rem 0;
-    background-color: #3e6fd8;
-}
-#testimony-section .container {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    position: relative;
-}
-#testimony-section .container .row {
-    width: 100%;
-    height: auto;
-    position: relative;
-    padding: 1rem;
-    margin: 2rem 0;
-}
-#testimony-section .container .row .col-1 {
-    width: 80%;
-    height: auto;
-    margin: auto;
-    background: #315bb6;
-    text-align: center;
-    display: block;
-    padding: 1rem;
-    border-radius: 0.4rem;
-}
-#testimony-section .container .row .col-1 .text {
-    margin-top: 1rem;
-    color: #fff;
-}
-#testimony-section .container .row .col-1 img {
-    width: 100px;
-    height: 100px;
-    margin-top: -2.5rem;
-    border-radius: 50%;
-}
-#contact-section {
-    width: 100%;
-    height: auto;
-    padding: 1rem 0;
-}
-#contact-section .container {
-    width: 90%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-}
-#contact-section .container .row-1 {
-    width: 50%;
-    height: auto;
-    margin: 0;
-}
-#contact-section .container .row-1 h2 {
-    margin: 1.5rem 0;
-}
-#contact-section .container .row-1 label {
-    width: 100%;
-    height: auto;
-    display: block;
-    font-size: 1.3rem;
-}
-#contact-section .container .row-1 textarea {
-    height: auto;
-    border: 1px solid snow;
-    padding: 0.2rem;
-    border-radius: 0.5rem;
-}
-#contact-section .container .row-1 input,
-#contact-section .container .row-1 textarea {
-    width: 100%;
-    display: block;
-    font-size: 1.3rem;
-    background-color: #fff;
-    outline: none;
-    margin: 1rem 0;
-}
-#contact-section .container .row-1 input {
-    height: 2rem;
-    padding: 0.5rem;
-    border: 1px solid snow;
-    border-radius: 0.2rem;
-}
-#contact-section .container .row-1 .send {
-    cursor: pointer;
-    width: 10rem;
-    color: #fff;
-    font-weight: 600;
-    border-radius: 2.5rem;
-    height: auto;
-    display: block;
-    background-color: #315bb6;
-    transition: 0.5s ease-in-out;
-}
-#contact-section .container .row-1 .send:hover {
-    background: #6495ed;
-}
-#contact-section .container .row-2 {
-    width: 50%;
-    height: auto;
-    margin: 0 1rem;
-    border: 1px solid #b6b2b2;
-}
-#contact-section .container .row-2 iframe {
-    width: 100%;
-    height: 100%;
-    border-radius: 0.3rem;
-}
-#footer-section {
-    padding: 1rem 0;
-    text-align: center;
-    background-color: #273766;
-}
-#footer-section ul {
-    width: 100%;
-    height: auto;
-    margin: auto;
-    justify-items: space-around;
-    text-align: center;
-}
-#footer-section ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 0.5rem;
-}
-#footer-section ul li a {
-    text-decoration: none;
-    color: #fff;
-    display: block;
-}
-#footer-section ul li a:focus {
-    color: #299ec5;
-}
-#footer-section p {
     padding: 0;
-    margin: 0;
-}
-#footer-section .lead {
-    color: #fff;
-}
-#footer-section .lead a {
+    color: #191919;
     text-decoration: none;
-    color: hsla(0, 0%, 100%, 0.541);
-    font-family: cursive;
-    font-weight: 600;
+    font-size: .8rem;
 }
-#footer-section .copy {
-    margin-top: 0.5rem;
-    font-size: 1.4rem;
+footer .col-12-2 ul li a:hover{
+    text-decoration: underline;
 }
-@media only screen and (max-width: 992px) {
-    #home-section {
-        width: 100%;
-        height: auto;
-        padding: 0.5rem;
-        text-align: center;
-    }
-    #home-section .container {
-        width: 100%;
-        height: auto;
-        display: block;
-        position: relative;
-    }
-    #home-section .container .row {
+@media only screen and (max-width:768px){
+    footer .col-12-2{
         width: 100%;
         height: auto;
         display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        position: relative;
+        flex-direction: column-reverse;
         align-items: center;
-        justify-items: center;
+        justify-content: space-between;
     }
-    #home-section .container .row .col-1 {
+    footer .col-12-2 .link-1{
         width: 100%;
-        height: auto;
-        display: block;
-        position: relative;
-        margin: 1rem 0;
-    }
-    #home-section .container .row .col-1 .row {
-        width: 100%;
-        height: auto;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        justify-content: center center;
-    }
-    #home-section .container .row .col-1 .row .col-btn {
-        width: 100%;
-        height: auto;
-        margin: 0.6rem 0;
-    }
-    #home-section .container .row .col-1 .row .col-btn .home-btn:hover {
-        background: #fff;
-        color: #547dca;
-    }
-    #home-section .container .row .col-1 .row .col-video {
-        width: 100%;
-        height: auto;
-        margin: 0.6rem 0;
-    }
-    #home-section .container .row .col-1 .row .col-video img {
-        margin: 0.2rem;
-    }
-    #home-section .container .row .col-2 {
-        width: 100%;
-        height: auto;
-        display: block;
-        position: relative;
-        margin: 1rem 0;
-    }
-    #contact-section {
-        width: 100%;
-        height: auto;
-        padding: 1rem 0;
-    }
-    #contact-section .container {
-        width: 90%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-    }
-    #contact-section .container .row-1,
-    #contact-section .container .row-2 {
-        width: 100%;
-        height: auto;
+        justify-content: center;
         margin: 0;
-        padding: 1rem;
-    }
-    #contact-section .container .row-2 {
-        border: 1px solid #b6b2b2;
-    }
-    #contact-section .container .row-2 iframe {
-        width: 100%;
-        height: 100%;
-        border-radius: 0.3rem;
-    }
-}
-@media only screen and (max-width: 768px) {
-    #navbar-section {
-        width: 100%;
-        height: auto;
-    }
-    #navbar-section .container {
-        width: 100%;
-        height: auto;
-        display: block;
-        position: relative;
-    }
-    #navbar-section .container .mobile-menu {
-        display: block;
-        position: absolute;
-        top: 6;
-        right: 0;
-    }
-    #navbar-section .container .mobile-menu .toggle {
-        font-size: 2rem;
-        cursor: pointer;
-    }
-    #navbar-section .container .mobile-menu .toggle img {
-        padding: 1rem;
-    }
-    #navbar-section .container .menu {
-        background-color: teal;
-        height: 100vh;
-        width: 60%;
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 1;
-        transition: transform .4s ease;
-        transform: translateX(110%)
-    }
-    #navbar-section .container .menu .menu-items {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-    #navbar-section .container .menu .menu-items .close-menu {
-        position: relative;
-        display: block;
-    }
-    #navbar-section .container .menu .menu-items .close-menu .close {
-        color: #fff;
-        cursor: pointer;
-    }
-    #navbar-section .container .menu .menu-items .close-menu .close img {
-        padding: 1rem;
-    }
-    #navbar-section .container .menu .menu-items .list-one {
-        width: 100%;
-        height: auto;
-        display: block;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-    #navbar-section .container .menu .menu-items .list-one .li {
-        width: 100%;
-        height: auto;
-        display: block;
-        margin: 1rem auto;
-    }
-    #navbar-section .container .menu .menu-items .list-one .li a {
-        width: 15rem;
-        font-size: 1.3rem;
-        color: #fff;
-        margin: auto;
-    }
-    #navbar-section .container .menu .menu-items .list-two {
-        width: 100%;
-        height: auto;
-        display: block;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-    #navbar-section .container .menu .menu-items .list-two .li {
-        width: 100%;
-        height: auto;
-        display: block;
-        margin: 1rem auto;
-    }
-    #navbar-section .container .menu .menu-items .list-two .li a {
-        width: 15rem;
-        font-size: 1.3rem;
-        color: #fff;
-        margin: auto;
-    }
-    #navbar-section .container .menu .menu-items .list-two .li:last-child a {
-        margin: auto;
-        width: 10rem;
-        color: #fff;
-        border: 1px solid #fff;
-    }
-    #navbar-section .container .block {
-        transform:translateX(0)
-    }
-    #home-section {
-        width: 100%;
-        height: auto;
-        padding: 0.5rem;
-        text-align: center;
-    }
-    #home-section .container {
-        width: 100%;
-        height: auto;
-        display: block;
-        position: relative;
-    }
-    #home-section .container .row {
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        position: relative;
-        align-items: center;
-        justify-items: center;
-    }
-    #home-section .container .row .col-1 {
-        width: 100%;
-        height: auto;
-        display: block;
-        position: relative;
-        margin: 1rem 0;
-    }
-    #home-section .container .row .col-1 .row {
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center center;
-    }
-    #home-section .container .row .col-1 .row .col-btn {
-        width: 100%;
-        height: auto;
-        margin: 0.6rem 0;
-    }
-    #home-section .container .row .col-1 .row .col-btn .home-btn:hover {
-        background: #fff;
-        color: #547dca;
-    }
-    #home-section .container .row .col-1 .row .col-video {
-        width: 100%;
-        height: auto;
-        margin: 0.6rem 0;
-    }
-    #home-section .container .row .col-1 .row .col-video img {
-        margin: 0.2rem;
-    }
-    #home-section .container .row .col-2 {
-        width: 90%;
-        height: auto;
-        display: block;
-        position: relative;
-        margin: 1rem 0;
-    }
-    #home-section .container .row .col-2 img {
-        width: 300px;
-        height: 300px;
-    }
-    #testimony-section .container {
-        width: 100%;
-        height: auto;
-        flex-direction: column;
-        position: relative;
-    }
-    #testimony-section .container .row {
-        width: 100%;
-        height: auto;
-        display: flex;
-        padding: 1rem;
-        margin: 2rem 0;
-    }
-    #testimony-section .container .row .col-1 {
-        width: 80%;
-        height: auto;
-        margin: auto;
-        background: #315bb6;
-        text-align: center;
-        display: block;
-        padding: 1rem;
-        border-radius: 0.4rem;
-    }
-    #testimony-section .container .row .col-1 .text {
-        margin-top: 1rem;
-        color: #fff;
-    }
-    #testimony-section .container .row .col-1 img {
-        width: 100px;
-        height: 100px;
-        margin-top: -2.5rem;
-        border-radius: 50%;
-    }
-}
 
+    }
+    footer .col-12-2 .link-2{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+
+    }
+    .main .row-2 .col-8 .row-3 .link li a{
+        font-size: .8rem;
+    }
+}
+@media only screen and (max-width:575px){
+    .main .row-2 .col-8{
+        width: 100%;
+    }
+}
     </style>
-</head>
-<body>
-    <!-- Navbar Section -->
-    <section id="navbar-section">
-        <div class="container">
+    <nav class="nav">
+        <ul class="navbar">
+            <li class="nav-item"><a 
 
-            <div class="mobile-menu">
-                <span class="toggle">
-                    <img src="https://shagor72.netlify.app/src/img/menu.svg" alt="Menu">
-                </span>
-            </div>
+class="nav-link" href="#">Gmail</a></li>
+            <li class="nav-item"><a 
 
-            <div class="logo">
-                <a href="index.html">
-                    <h1>Rember<span>That</span></h1>
-                </a>
-            </div>
-            <div class="menu">
-                <div class="menu-items">
-                
-                    <div class="close-menu">
-                        <span class="close">
-                            <img src="https://shagor72.netlify.app/src/img/exit.svg" alt="Exit">
-                        </span>
-                    </div>
-    
-                    <ul class="list-one">
-                        <li class="li"><a href="#">Home</a></li>
-                        <li class="li"><a href="#">Features</a></li>
-                        <li class="li"><a href="#">Pricing</a></li>
-                    </ul>
-                    <ul class="list-two">
-                        <li class="li"><a href="#">Contact</a></li>
-                        <li class="li"><a href="#">Go Premium</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Navbar Section -->
+class="nav-link" href="#">Images</a></li>
+            <li class="nav-item"><a 
 
-    <!-- Home Section -->
-    <section id="home-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-1">
-                    <h4>Its Nitty & Gritty</h4>
-                    <h2>A Task App That Doesn't Stink</h2>
-                    <div class="row">
-                        <div class="col-btn">
-                            <a href="#" class="home-btn">Try for free</a>
-                        </div>
-                        <div class="col-video">
-                            <a href="#"><img src="https://shagor72.netlify.app/src/img/watch.svg" alt="Video"></a>
-                            <a href="#"><p>Watch a video</p></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-2">
-                    <img src="https://shagor72.netlify.app/src/img/illustration.svg" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Home Section Ends Here -->
-    <!-- List Section -->
-    <section id="list-section">
-        <ul class="container">
-            <li>Unlimited Task</li>
-            <li>SMS Task Reminders</li>
-            <li>Complete Explosion Upon Task Completion</li>
-            <li>Social Media Annoucement</li>
-            <li>Realtime Collaboration</li>
-            <li>Other Awesome Features</li>
+class="nav-link" href="#"><svg id="apps" 
+
+data-name="Layer 1" 
+
+xmlns="http://www.w3.org/2000/svg" 
+
+viewBox="0 0 100 100"><rect x="37" 
+
+width="26" height="26"/><rect width="26" 
+
+height="26"/><rect x="74" width="26" 
+
+height="26"/><rect x="37" y="37" width="26" 
+
+height="26"/><rect y="37" width="26" 
+
+height="26"/><rect x="74" y="37" width="26" 
+
+height="26"/><rect x="37" y="74" width="26" 
+
+height="26"/><rect y="74" width="26" 
+
+height="26"/><rect x="74" y="74" width="26" 
+
+height="26"/></svg></a></li>
+            <li class="nav-item"><a 
+
+class="nav-link" href="#"><img 
+
+src="https://avatars.githubusercontent.com/u
+
+/79301601?
+
+s=460&u=7684b98aa339b5a8edcf6261ff784988b8cc
+
+c5ae&v=4" alt="Shagor"></a></li>
         </ul>
-    </section>
-    <!-- List Section Ends Here -->
+    </nav>
+    <div class="main">
+        <div class="row-1">
+            <div class="col-6">
+                <img 
 
-    <!-- Testimony Section -->
-    <section id="testimony-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-1">
-                    <img src="https://shagor72.netlify.app/src/img/person.jpg" alt="Person">
-                    <p class="text">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta maxime, ab sint necessitatibus dolores atque fuga nulla repellat animi voluptates!"</p>
-                    <h5 class="text">-John Doe</h5>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-1">
-                    <img src="https://shagor72.netlify.app/src/img/person.jpg" alt="Person">
-                    <p class="text">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta maxime, ab sint necessitatibus dolores atque fuga nulla repellat animi voluptates!"</p>
-                    <h5 class="text">-John Doe</h5>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-1">
-                    <img src="https://shagor72.netlify.app/src/img/person.jpg" alt="Person">
-                    <p class="text">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta maxime, ab sint necessitatibus dolores atque fuga nulla repellat animi voluptates!"</p>
-                    <h5 class="text">-John Doe</h5>
-                </div>
+src="src/img/google.png" alt="Google">
             </div>
         </div>
-    </section>
-    <!-- Testimony Section Ends Here -->
+        <div class="row-2">
+            <div class="col-8">
+                <form class="input">
+                    <svg id="search" 
 
-    <!-- Contact Section -->
-    <section id="contact-section">
-        <div class="container">
-            <form action="#" class="row-1" method="POST" netlify>
-                <h2>Contact</h2>
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name">
-                <label for="message">Your Message</label>
-                <textarea name="message" id="message" rows="5"></textarea>
-                <input class="send" type="submit" value="Send">
-            </form>
-            <div class="row-2">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3667.616233608657!2d89.21391984864779!3d23.184202669276942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1612073613985!5m2!1sen!2sbd" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+focusable="false" 
+
+xmlns="http://www.w3.org/2000/svg" 
+
+viewBox="0 0 24 24"><path d="M15.5 
+
+14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 
+
+6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-
+
+1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 
+
+0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 
+
+14 9.5 11.99 14 9.5 14z"></path></svg>
+                    <input type="search" 
+
+name="search">
+                    <svg id="mic" 
+
+class="HPVvwb" focusable="false" viewBox="0 
+
+0 24 24" 
+
+xmlns="http://www.w3.org/2000/svg"><path 
+
+d="m12 15c1.66 0 3-1.31 3-2.97v-7.02c0-1.66
+
+-1.34-3.01-3-3.01s-3 1.34-3 3.01v7.02c0 1.66 
+
+1.34 2.97 3 2.97z" 
+
+fill="#4285f4"></path><path d="m11 
+
+18.08h2v3.92h-2z" 
+
+fill="#34a853"></path><path d="m7.05 
+
+16.87c-1.27-1.33-2.05-2.83-2.05-4.87h2c0 
+
+1.45 0.56 2.42 1.47 3.38v0.32l-1.15 1.18z" 
+
+fill="#f4b400"></path><path d="m12 
+
+16.93a4.97 5.25 0 0 1 -3.54 -1.55l-1.41 
+
+1.49c1.26 1.34 3.02 2.13 4.95 2.13 3.87 0 
+
+6.99-2.92 6.99-7h-1.99c0 2.92-2.24 4.93-5 
+
+4.93z" fill="#ea4335"></path></svg>
+                </form>
+                <div class="row-3">
+                    <div class="link">
+                        <li><a 
+
+href="#">Google Search</a></li>
+                        <li><a href="#">I'm 
+
+feeling lucky</a></li>
+                    </div>
+                    <li class="lan">Google 
+
+offered in:<a href="#">বাংলা</a></li>
+                </div>
             </div>
         </div>
-    </section>
-    <!-- Contact Section Ends Here -->
-    <!--Footer-section-->
-    <section id="footer-section">
-        <div class="container">
-            <footer>
-                <div class="row">
-                    <div class="col">
-                        <ul>
-                            <li><a href="#">Facebook</a></li>
-                            <li><a href="#">Twitter</a></li>
-                            <li><a href="#">Google+</a></li>
-                            <li><a href="#">LinkedIn</a></li>
-                            <li><a href="#">Behance</a></li>
-                            <li><a href="#">Dribble</a></li>
-                            <li><a href="#">Github</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <p class="lead copy">Copyright 2020 &copy; Apps</p>
-                        <p class="lead">
-                            All Rights Reseved :
-                            <a class="shagor" href="#">Shagor</a>
-                        </p>
-                    </div>
-                </div>
-            </footer>
+    </div>
+    <footer class="row">
+        <div class="col-12-1">
+            <p>Bangladesh</p>
         </div>
-    </section>
-    <!--Footer-section Ends Here-->
-    <!-- <script src="src/js/bootstrap.bundle.min.js"></script> -->
-    <script>
-        const menuitem = document.querySelector(".menu"),
-    showbtn = document.querySelector(".toggle"),
-    closebtn = document.querySelector(".close");
-showbtn.addEventListener("click", (e) => {
-    e.preventDefault(), menuitem.classList.add("block");
-}),
-    closebtn.addEventListener("click", (e) => {
-        e.preventDefault(), menuitem.classList.remove("block");
-    });
-    </script>
+        <hr>
+        <div class="col-12-2">
+            <ul class="link-1">
+                <li><a 
+
+href="#">About</a></li>
+                <li><a 
+
+href="#">Advertising</a></li>
+                <li><a 
+
+href="#">Business</a></li>
+                <li><a href="#">How Search 
+
+works</a></li>
+            </ul>
+            <ul class="link-2">
+                <li><a 
+
+href="#">Privacy</a></li>
+                <li><a 
+
+href="#">Terms</a></li>
+                <li><a 
+
+href="#">Setting</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
